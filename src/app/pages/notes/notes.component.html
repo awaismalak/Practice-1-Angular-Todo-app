@@ -1,0 +1,8 @@
+<h1>Todo task List</h1>
+
+<div id="notes">
+    <div class="note" *ngFor="let task of tasks" routerLink="/edit">
+        <h3>{{task.title}}</h3>
+        <p>{{task.description}}</p>
+    </div>
+</div>

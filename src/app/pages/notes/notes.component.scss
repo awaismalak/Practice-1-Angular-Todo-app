@@ -1,0 +1,24 @@
+
+#notes{
+    margin: auto;
+    width: 80%;
+    min-height: 800px;
+    display: flex;
+    background-color: antiquewhite;
+    justify-content: center;
+    align-items: flex-start;
+
+    
+ .note{
+    background-color:lightgray;
+    min-height: 200px;
+    width: 250px;
+    border-radius: 20px;
+    margin: 10px;
+    text-align: center;
+    padding: 5px;
+
+
+
+ }
+}

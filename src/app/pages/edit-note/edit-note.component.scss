@@ -1,4 +1,10 @@
-#button
+#editTask{
+    width: 90%;
+    min-height: 300px;
+    margin: auto;
+
+
+button
 {
     background-color: green;
     border: 0px solid;
@@ -6,4 +12,5 @@
     border-radius: 10px;
     padding: 10px;
     color: white;
+}
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TasksService } from 'src/app/shared/services/tasks.service';
 
 @Component({
   selector: 'app-edit-note',
@@ -7,9 +8,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EditNoteComponent implements OnInit {
 
-  constructor() { }
+  task: any = {};
+
+  constructor(
+    private tasksService: TasksService
+  ) { 
+
+    this.task = this.tasksService.tasks[this.tasksService.selectedIndex];
+
+  }
 
   ngOnInit() {
   }
 
 }
+
+
+
+
+
+
+
+// 03434789097

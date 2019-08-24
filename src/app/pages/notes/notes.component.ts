@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {TasksService} from '../../shared/services/tasks.service';
+import { from } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-notes',
@@ -6,17 +9,28 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./notes.component.scss']
 })
 export class NotesComponent implements OnInit {
+  tasks=[];
+  constructor(
+    private taskServices :TasksService,
+    private routerService:Router
+    
+    ) 
+  {
+    this.tasks = this.taskServices.tasks;
+   }
 
-  tasks=[
-  {'title':'Task one','description':'Breakfast time is 9:00 clock to 10:00 clock'},
-  {'title':'Task Two','description':'Lunch time is 11:00 clock to 12:00 clock'},
-  {'title':'Task Three','description':'Dinner time is 5:00 clock to 6:00 clock'}
-]
 
 
-  constructor() { }
+
 
   ngOnInit() {
+  }
+
+  edit(index){
+    alert(index);
+
+    this.taskServices.selectedIndex = index;
+    this.routerService.navigateByUrl('/edit');
   }
 
 }

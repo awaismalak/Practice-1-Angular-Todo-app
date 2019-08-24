@@ -4,6 +4,7 @@
     width: 80%;
     min-height: 800px;
     display: flex;
+    flex-wrap: wrap;
     background-color: antiquewhite;
     justify-content: center;
     align-items: flex-start;
@@ -17,6 +18,7 @@
     margin: 10px;
     text-align: center;
     padding: 5px;
+    outline: none;
 
 
 

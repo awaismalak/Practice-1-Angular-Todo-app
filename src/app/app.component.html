@@ -1,16 +1,39 @@
-<button 
 
-  *ngIf="router.url=='/'"
-  id="button" 
-  routerLink="/notes">Notes</button>
 
-  <button
-  *ngIf="router.url!='/'"
-  id="button" 
-  routerLink="/"
-  >
-  Back
-  </button>
+
+
+
+
+<button id="button"
+
+routerLink="/notes"
+*ngIf="router.url!='/notes'">
+  
+{{router.url=='/'?'Notes':'Back'}}
+
+
+</button>
+
+
+<button id="button"
+
+routerLink="/"
+*ngIf="router.url=='/notes'">
+Back
+</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <router-outlet></router-outlet>
 
